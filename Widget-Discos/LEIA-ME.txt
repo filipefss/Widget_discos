@@ -1,0 +1,61 @@
+WIDGET DISCOS - Windows 10 / 11
+
+1. Extraia o ZIP para uma pasta permanente, por exemplo Documentos\WidgetDiscos.
+2. Clique duas vezes em Iniciar.cmd.
+3. Arraste o titulo "Meus discos" para reposicionar o widget.
+4. Para abrir a cada login, execute Ativar-Inicio-Automatico.cmd.
+   Mantenha a pasta no mesmo local depois de ativar.
+
+Mostra as unidades locais com letra (C:, D:, etc.) e dispositivos removiveis
+conectados e prontos. Uma unidade corresponde a um volume; um disco fisico
+particionado pode aparecer em mais de uma linha. Nao inclui rede, unidades
+sem letra, nem armazenamento em nuvem.
+
+Atualiza a cada 10 segundos. Mostra espaco disponivel para seu usuario,
+capacidade total e porcentagem livre. A barra representa o espaco ocupado.
+Verde: ao menos 20% livre; amarelo: de 10% a menos de 20%; vermelho: abaixo de 10%.
+GiB/TiB usam base 1024, por isso diferem dos GB/TB anunciados pelos fabricantes.
+
+Desmarque "Sempre visivel sobre as janelas" para permitir que outras janelas
+cubram o widget. Ele e uma janela flutuante; nao e embutido no papel de parede.
+O comando Mostrar area de trabalho do Windows pode oculta-lo.
+Clique no X para fechar. Posicao e preferencia sao salvas ao fechar.
+
+Para remover: execute Desativar-Inicio-Automatico.cmd, feche o widget e
+apague a pasta extraida. Preferencias e erros ficam em %LOCALAPPDATA%\WidgetDiscos.
+
+Nao precisa de administrador nem de downloads adicionais. Os arquivos CMD
+executam apenas o script incluido, usando o Windows PowerShell do sistema.
+A opcao ExecutionPolicy Bypass vale somente para esse processo.
+Politicas corporativas podem impedir a execucao.
+
+Nao foi possivel executar a interface Windows no ambiente de criacao.
+Se nao abrir, consulte %LOCALAPPDATA%\WidgetDiscos\erro.txt.
+
+ATUALIZACAO: PAINEL COMPACTO
+Painel com largura de 280 pixels logicos (antes 340), margens menores
+ e numeros principais de 18 pontos. O tamanho acompanha a escala do Windows.
+Todos os discos aparecem sem rolagem. A altura acompanha a quantidade de
+unidades; listas maiores usam colunas automaticamente. Em telas pequenas,
+o painel inteiro pode ser reduzido proporcionalmente para caber na area util.
+Nomes longos sao abreviados; passe o mouse para ver o nome completo.
+
+Apenas duas opcoes de visibilidade:
+- Semitransparente: 50% de opacidade do painel inteiro.
+- Totalmente visivel: 100% de opacidade.
+A escolha e salva ao fechar e restaurada na abertura.
+Preferencias antigas abaixo de 100 sao convertidas para semitransparente.
+
+Animacoes suaves na abertura, na mudanca de visibilidade e nas barras de uso.
+Respeitam a preferencia de animacoes da interface do Windows.
+Abrir Iniciar.cmd novamente traz o widget para 100%, sem duplicar janelas.
+
+Para atualizar: feche o widget antigo pelo X e substitua os arquivos na
+mesma pasta pelos deste ZIP. Depois abra Iniciar.cmd. O atalho de inicio
+continua valido se voce mantiver o mesmo caminho.
+
+MODELO DE VISUALIZACAO
+Cartoes com barras horizontais animadas: facilitam comparar o uso dos discos
+sem perder o valor exato de espaco livre e total. Todos os cartoes ficam
+visiveis simultaneamente. A disposicao se adapta quando unidades entram
+ou saem. Mantidas as opcoes semitransparente e totalmente visivel.
